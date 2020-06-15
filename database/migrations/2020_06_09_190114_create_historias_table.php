@@ -19,7 +19,7 @@ class CreateHistoriasTable extends Migration
             $table->string('Titulo');
             $table->string('Descripcion',1000);
             $table->longText('Texto');
-            $table->string('Imagen') -> nullable();
+            $table->string('imagen') -> nullable();
             $table->string('Enlace_historia');
             $table->string('Enlace_video');
         });

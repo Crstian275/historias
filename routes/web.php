@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'MainController@index')->name ('main');
 Route::get('historia/{historia}','MainController@show')->name('historia');
+Route::resource('historias','HistoriaController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
