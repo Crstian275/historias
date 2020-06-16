@@ -23,12 +23,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-light" href="{{ url('/') }}">  
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a href="{{Route('historias.index') }}" class="navbar-brand text-dark">Listado</a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,14 +41,18 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                                <a href="{{Route('historias.index') }} " class="nav-link">Listado</a>
+
+                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
@@ -75,10 +79,20 @@
             </div>
         </nav>
 
+
+
         <main class="py-4">
 
-            <a href="{{ route('main') }}" class="text-decoration-none text-dark">
-    <div class="container">
+       
+    <div class="container"> 
+        <div class="d-flex align-items-center">
+            <img src="{{asset('/img/tierra.gif')}}" class="logo mr-5">
+<a href="{{ route('main') }}" class="text-decoration-none text-dark">
+ <h1 class="text-center letra">HISTORIAS DE TERROR</h1>
+    </a>
+        
+
+        </div>
                 <div class="py-4">
                 @if(session()->has('success'))
                     <div class="alert alert-success">
@@ -95,8 +109,7 @@
                 @endif
             </div>
 
-    <h1 class="text-center">HISTORIAS DE TERROR</h1>
-    </a>
+   
             @yield('content')
         </main>
     </div>

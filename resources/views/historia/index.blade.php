@@ -11,10 +11,10 @@
 				<thead class="thead-light">
 					<tr>
 
-				<th class="d-none d-md-table-cell"> Titulo </th>
+                <th class="d-md-table-cell"> Imagen </th>
+                <th class=" d-md-table-cell"> Titulo </th>
 				<th class="d-none d-md-table-cell"> Descripcion </th>
 				<th  class="d-none d-md-table-cell"> Texto </th>
-				<th class="d-none d-md-table-cell"> Imagen </th>
 				<th  class="d-none d-md-table-cell"> Enlace_historia </th>
 				<th  class="d-none d-md-table-cell"> Enlace_video </th>
 				<th> Acciones </th>	
@@ -23,10 +23,10 @@
 				<tbody>
 					@foreach($historias as $historia)
 					<tr>
-					<td  class="d-none d-md-table-cell">{{$historia->Titulo}}</td>
+					<td  class="d-md-table-cell"><img src="{{asset($historia->imagen)}}"alt="imagen de {{$historia-> Titulo}}" class="card-img-top rounded"></td>
+                    <td  class="d-md-table-cell">{{$historia->Titulo}}</td>
 					<td  class="d-none d-md-table-cell">{{$historia->Descripcion}}</td>
 					<td  class="d-none d-md-table-cell">{{$historia->Texto}}</td>
-					<td  class="d-none d-md-table-cell">{{$historia->imagen}}</td>
 					<td  class="d-none d-md-table-cell">{{$historia->Enlace_historia}}</td>
 					<td  class="d-none d-md-table-cell">{{$historia->Enlace_video}}</td>
 
