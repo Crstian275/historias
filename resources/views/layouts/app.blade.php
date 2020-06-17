@@ -86,7 +86,7 @@
        
     <div class="container"> 
         <div class="d-flex align-items-center">
-            <img src="{{asset('/img/tierra.gif')}}" class="logo mr-5">
+            <img src="{{asset('/img/terror1.gif')}}" class="logo mr-5">
 <a href="{{ route('main') }}" class="text-decoration-none text-dark">
  <h1 class="text-center letra">HISTORIAS DE TERROR</h1>
     </a>

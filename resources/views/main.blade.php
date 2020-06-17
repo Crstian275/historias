@@ -5,7 +5,7 @@
 
      @foreach($historias as $historia)
      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-       <div class="card my-3 p-2 shadow bg-transparent">
+       <div class="card my-3 p-2 shadow fondoopaco">
          <img src="{{asset($historia->imagen)}}"alt="imagen de {{$historia-> Titulo}}" class="card-img-top rounded">
            <div class="card-body">
            <h4 class="card-title text-light">{{$historia->Titulo}}</h4>
@@ -14,8 +14,8 @@
           
        </div>
 
-       <div class=" card-footer text-center">
-            <a href="{{route('historia',['historia' => $historia->id]) }}" class="text-center">
+       <div class=" card-footer text-center myButton">
+            <a href="{{route('historia',['historia' => $historia->id]) }}" class="text-center text-light">
               Historia Completa
               </a>
           </div>

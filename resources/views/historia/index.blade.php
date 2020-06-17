@@ -3,32 +3,36 @@
 @section('content')
 
 <div class="container">
-	<h1>Lista de historias</h1>
-	<a href="{{route('historias.create')}}" class="mb-3"><i class="fas fa-user-edit icono"></i></a>
+	<h1 class="text-light">Lista de historias</h1>
+	<a href="{{route('historias.create')}}" class="mb-3 float-right mr-3 "><button class="myButton"><i class="fas fa-user-edit icono"></i></button></a>
 	<table>
 		<div class="responsive">
-			<table class="table-striped">
-				<thead class="thead-light">
+			<table class="table">
+				<thead class="thead-dark">
 					<tr>
 
-                <th class="d-md-table-cell"> Imagen </th>
-                <th class=" d-md-table-cell"> Titulo </th>
-				<th class="d-none d-md-table-cell"> Descripcion </th>
-				<th  class="d-none d-md-table-cell"> Texto </th>
-				<th  class="d-none d-md-table-cell"> Enlace_historia </th>
-				<th  class="d-none d-md-table-cell"> Enlace_video </th>
-				<th> Acciones </th>	
+                <th class="d-md-table-cell text-light"> Imagen </th>
+                <th class=" d-md-table-cell text-light"> Titulo </th>
+				<th class="d-none d-md-table-cell text-light"> Descripcion </th>
+				<th  class="d-none d-md-table-cell text-light"> Texto </th>
+				<th  class="d-none d-md-table-cell text-light"> Enlace_historia </th>
+				<th  class="d-none d-md-table-cell text-light"> Enlace_video </th>
+				<th class="text-light"> Acciones </th>	
 				</tr>
 				</thead>
 				<tbody>
 					@foreach($historias as $historia)
 					<tr>
-					<td  class="d-md-table-cell"><img src="{{asset($historia->imagen)}}"alt="imagen de {{$historia-> Titulo}}" class="card-img-top rounded"></td>
-                    <td  class="d-md-table-cell">{{$historia->Titulo}}</td>
-					<td  class="d-none d-md-table-cell">{{$historia->Descripcion}}</td>
-					<td  class="d-none d-md-table-cell">{{$historia->Texto}}</td>
-					<td  class="d-none d-md-table-cell">{{$historia->Enlace_historia}}</td>
-					<td  class="d-none d-md-table-cell">{{$historia->Enlace_video}}</td>
+					<td  class="d-md-table-cell text-light"><img src="{{asset($historia->imagen)}}"alt="imagen de {{$historia-> Titulo}}" class="imagenlista"></td>
+                    <td  class="d-md-table-cell text-light">{{$historia->Titulo}}</td>
+					<td  class="d-none d-md-table-cell text-light">{{$historia->Descripcion}}</td>
+					<td  class="d-none d-md-table-cell text-light">{{$historia->Texto}}</td>
+					<td  class="d-none d-md-table-cell text-light">
+                     <a href="{{$historia->Enlace_historia}}" target="_blank">Historia</a>
+				    </td>
+					<td  class="d-none d-md-table-cell text-light"> 
+						<a href="{{$historia->Enlace_video}}" target="_blank">Video</a> 
+					</td>
 
 					<td>
 						<a href="{{route('historias.edit',['historia'=>$historia->id])}}"class="myButton mb-3 d-block text-center"><i class="fas fa-edit icono"></i></a>
