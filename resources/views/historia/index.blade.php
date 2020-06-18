@@ -28,10 +28,10 @@
 					<td  class="d-none d-md-table-cell text-light">{{$historia->Descripcion}}</td>
 					<td  class="d-none d-md-table-cell text-light">{{$historia->Texto}}</td>
 					<td  class="d-none d-md-table-cell text-light">
-                     <a href="{{$historia->Enlace_historia}}" target="_blank">Historia</a>
+                     <a href="{{$historia->Enlace_historia}}" target="_blank" class="text-light">Historia</a>
 				    </td>
 					<td  class="d-none d-md-table-cell text-light"> 
-						<a href="{{$historia->Enlace_video}}" target="_blank">Video</a> 
+						<a href="{{$historia->Enlace_video}}" target="_blank" class="text-light">Video</a> 
 					</td>
 
 					<td>

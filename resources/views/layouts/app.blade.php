@@ -50,19 +50,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </li>
-                            @if (Route::has('register'))
+                        <!-- codigo para  poder registrarse -->
+                          <!--   @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
-                            @endif
+                            @endif-->
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-right fondoopaco" aria-labelledby="navbarDropdown">
+                                    <a class=" text-light dropdown-item myButton" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -86,7 +87,7 @@
        
     <div class="container"> 
         <div class="d-flex align-items-center">
-            <img src="{{asset('/img/terror1.gif')}}" class="logo mr-5">
+            <img src="{{asset('/img/calavera1.png')}}" class="logo mr-5">
 <a href="{{ route('main') }}" class="text-decoration-none text-dark">
  <h1 class="text-center letra">HISTORIAS DE TERROR</h1>
     </a>
@@ -95,13 +96,13 @@
         </div>
                 <div class="py-4">
                 @if(session()->has('success'))
-                    <div class="alert alert-success">
+                    <div class="alert fondoopaco text-light">
                         {{ session()->get('success') }}
                     </div>
                 @endif
 
                 @if(isset($errors) && $errors->any())
-                    <div class="alert alert-danger">
+                    <div class="alert fondoopaco text-light">
                         @foreach($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
