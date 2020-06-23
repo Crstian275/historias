@@ -10,9 +10,9 @@
   	</div>
   	  <div class=" text-light col-12 text-center col-md-6 text-md-left align-self-md-center">
   	   	 <h4>{{ $historia -> Titulo }}</h4>
-  	   	 <p>{{ $historia->Texto}}</p>
-         <a href="{{$historia -> Enlace_historia}}" class="d-block text-light" target="_blank">Enlace De La Historia</a>
-         <a href="{{$historia -> Enlace_video}}" class="d-block text-light" target="_blank">Enlace Del Video</a>
+  	   	 <p class="text-justify">{{ $historia->Texto}}</p>
+         <a href="{{$historia -> Enlace_historia}}" class="btn btn-outline-light" target="_blank">Enlace De La Historia</a>
+         <a href="{{$historia -> Enlace_video}}" class="btn btn-outline-light" target="_blank">Enlace Del Video</a>
          
   	   	 
   	   	
